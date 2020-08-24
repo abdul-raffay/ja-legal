@@ -7,6 +7,12 @@
  * @since 1.0
  */
 
+	//  custom nav
+	function custom_nav_menu() {
+		register_nav_menu( 'custom-nav-menu', __('Main Menu') );
+	}
+	add_action( 'init', 'custom_nav_menu' );
+
 
  function jalegal_files() {
 	// CSS

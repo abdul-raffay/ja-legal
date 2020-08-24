@@ -53,7 +53,19 @@
         </div>
 
         <div class="menu-drop flex-wrp">
-          <ul class="main-menu">
+            <style>
+                .main-menu > li > a {
+                    text-transform: uppercase !important;
+                }
+            </style>
+            <?php
+                wp_nav_menu(array(
+                    'theme_location' => 'custom-nav-menu',
+                    'container' => 'ul',
+                    'menu_class' => 'main-menu',
+                ));
+            ?>
+          <!-- <ul class="main-menu">
             <li><a href="https://jalegal.nytrotech.net/">HOME</a></li>
             <li><a href="https://jalegal.nytrotech.net/about/">ABOUT</a></li>
             <li><a href="https://jalegal.nytrotech.net/expertise-main/">EXPERTISE</a></li>
@@ -62,7 +74,7 @@
             <li><a href="https://jalegal.nytrotech.net/overseas-law/">ARE YOU AN OVERSEAS LAW FIRM</a></li>
             <li><a href="https://jalegal.nytrotech.net/contact/">OFFICES AND CONTACTS</a></li>
             <li><a href="https://jalegal.nytrotech.net/get-involved/">GET INVOLVED</a></li>
-          </ul>
+          </ul> -->
           <div class="footer">
             <div class="career-wrp">
             </div>
