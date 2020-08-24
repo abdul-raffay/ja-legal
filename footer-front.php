@@ -8,6 +8,12 @@
   </footer>
 
 
+  <script src="<?php echo get_template_directory_uri().'/js/jalegal_js/jquery.min.js'; ?>"></script>
+  <script src="<?php echo get_template_directory_uri().'/js/jalegal_js/common-es.js'; ?>"></script>
+  <script src="<?php echo get_template_directory_uri().'/js/jalegal_js/common-jquery.js'; ?>"></script>
+  <script src="<?php echo get_template_directory_uri().'/js/jalegal_js/custom.js'; ?>"></script>
+  <script src="<?php echo get_template_directory_uri().'/js/jalegal_js/jquery.onepage-scroll.min.js'; ?>"></script>
+
   <!-- JS Files -->
 	<?php wp_footer(); ?>
 </body>

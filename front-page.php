@@ -17,7 +17,7 @@
           <div class="wrapper">
             <div class="search_box">
               <form id="search-box" class="" action="" method="get">
-                <input type="text" name="keyword" id="text" class="input_search" value=""
+                <input type="text" name="s" id="text" class="input_search" value=""
                   placeholder="Search for people, events, expertise etc…" />
                 <button type="submit" class="searchBtn">
                   <img src="<?php echo get_template_directory_uri().'/img/jalegal_img/search_icon.png'; ?>" alt="search" />

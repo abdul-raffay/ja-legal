@@ -12,20 +12,20 @@
 	// CSS
 	wp_enqueue_style('main_style_jalegal', get_theme_file_uri('css/jalegal_style/style.css'));
 	wp_enqueue_style('media_style_jalegal', get_theme_file_uri('css/jalegal_style/media.css'));
-	wp_enqueue_style('one_page_style_jalegal', get_theme_file_uri('css/jalegal_style/onepage-scroll.css'));
+	// wp_enqueue_style('one_page_style_jalegal', get_theme_file_uri('css/jalegal_style/onepage-scroll.css'));
 
 	// Google Fonts
-	wp_enqueue_style('googleFontsAPI', 'https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700');
+	// wp_enqueue_style('googleFontsAPI', 'https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700');
 
 	// Font Awesome
-	wp_enqueue_style('fontAwesomeCSS', 'https://use.fontawesome.com/releases/v5.6.3/css/all.css');
+	// wp_enqueue_style('fontAwesomeCSS', 'https://use.fontawesome.com/releases/v5.6.3/css/all.css');
 
 	// JS
-	wp_enqueue_script('common_script_jalegal', get_theme_file_uri('js/jalegal_js/jquery.min.js'), '', '1.0', true);
+	// wp_enqueue_script('common_script_jalegal', get_theme_file_uri('js/jalegal_js/jquery.min.js'), '', '1.0', true);
 	wp_enqueue_script('common_script_jalegal', get_theme_file_uri('js/jalegal_js/common-es.js'), '', '1.0', true);
 	wp_enqueue_script('common_jquery_script_jalegal', get_theme_file_uri('js/jalegal_js/common-jquery.js'), '', '1.0', true);
 	wp_enqueue_script('main_script_jalegal', get_theme_file_uri('js/jalegal_js/custom.js'), '', '1.0', true);
-	wp_enqueue_script('jquery_one_page_script_jalegal', get_theme_file_uri('js/jalegal_js/jquery.onepage-scroll.min.js'), '', '1.0', true);
+	// wp_enqueue_script('jquery_one_page_script_jalegal', get_theme_file_uri('js/jalegal_js/jquery.onepage-scroll.min.js'), '', '1.0', true);
 	// wp_enqueue_script('complete_script_jalegal', get_theme_file_uri('js/jalegal_js/autocomplete.js'), '', '1.0', true);
 	// wp_enqueue_script('jquery_script_jalegal', 'https://code.jquery.com/jquery-3.5.1.slim.js', '', '1.0', true);
 	// wp_enqueue_script('common_jquery_dev_script_jalegal', get_theme_file_uri('js/jalegal_js/dist/common-jquery.dev.js'), '', '1.0', true);

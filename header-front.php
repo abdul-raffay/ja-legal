@@ -12,10 +12,13 @@
   </title>
 <!-- 
   <link rel="canonical" href="index.html" /> -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
     integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-
-  <?php wp_head(); ?>
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri().'/css/jalegal_style/onepage-scroll.css'; ?>">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri().'/css/jalegal_style/style.css'; ?>">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri().'/css/jalegal_style/media.css'; ?>">
+  <?php // wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>

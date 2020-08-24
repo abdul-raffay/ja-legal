@@ -19,8 +19,8 @@ $nectar_options        = get_nectar_theme_options();
 
 ?>
 
-<header id="top">
-	<div class="container">
+	<!-- <header id="top">
+		<div class="container">
 		<div class="row">
 			<div class="col span_3">
 				<a id="logo" href="<?php echo esc_url( home_url() ); ?>" data-supplied-ml-starting-dark="<?php echo esc_attr( $nectar_header_options['using_mobile_logo_starting_dark'] ); ?>" data-supplied-ml-starting="<?php echo esc_attr( $nectar_header_options['using_mobile_logo_starting'] ); ?>" data-supplied-ml="<?php echo esc_attr( $nectar_header_options['using_mobile_logo'] ); ?>" <?php echo wp_kses_post( $nectar_header_options['logo_class'] ); ?>>
@@ -42,7 +42,6 @@ $nectar_options        = get_nectar_theme_options();
 					?>
 					<nav class="left-side" data-using-pull-menu="<?php echo esc_attr( $has_pull_left_menu ); ?>">
 						<?php
-						// Pull left menu.
 						if ( has_nav_menu( 'top_nav_pull_left' ) ) {
 							wp_nav_menu(
 								array(
@@ -68,7 +67,7 @@ $nectar_options        = get_nectar_theme_options();
 						<?php } ?>
 					</nav>
 				<?php } ?>
-			</div><!--/span_3-->
+			</div>
 			
 			<div class="col span_9 col_last">
 				<?php
@@ -162,7 +161,6 @@ $nectar_options        = get_nectar_theme_options();
 									echo '</li>';
 								}
 								
-								// Pull right.
 								if ( $nectar_header_options['header_format'] === 'centered-menu' && 
 								$nectar_header_options['using_pr_menu'] === 'true' ||
 								$nectar_header_options['header_format'] === 'centered-logo-between-menu' && 
@@ -197,7 +195,7 @@ $nectar_options        = get_nectar_theme_options();
 					}
 					?>
 					
-				</div><!--/span_9-->
+				</div>
 				
 				<?php if ( $nectar_header_options['header_format'] === 'menu-left-aligned' ) { ?>
 					<div class="right-aligned-menu-items">
@@ -205,7 +203,6 @@ $nectar_options        = get_nectar_theme_options();
 							<ul class="buttons sf-menu" data-user-set-ocm="<?php echo esc_attr( $nectar_header_options['user_set_side_widget_area'] ); ?>">
 								
 								<?php
-								// Pull right.
 								if ( $nectar_header_options['using_pr_menu'] === 'true' ) {
 									wp_nav_menu(
 										array(
@@ -234,7 +231,7 @@ $nectar_options        = get_nectar_theme_options();
 							}
 							?>
 						</nav>
-					</div><!--/right-aligned-menu-items-->
+					</div>
 					
 					<?php
 				} elseif ( $nectar_header_options['header_format'] === 'left-header' ) {
@@ -249,11 +246,66 @@ $nectar_options        = get_nectar_theme_options();
 				}
 				?>
 				
-			</div><!--/row-->
+			</div>
 			<?php
 			if( $nectar_header_options['side_widget_class'] === 'simple' ) {
 				get_template_part( 'includes/partials/header/classic-mobile-nav' );
 			}
 			?>
-		</div><!--/container-->
-	</header>
+		</div>
+	</header> -->
+
+		<header style="">
+			<nav>
+				<div class="container">
+					<div class="wrapper flex-wrp">
+					<div class="logo">
+						<a href="index.html"><img src="<?php echo get_template_directory_uri().'/img/jalegal_img/logo-b.svg'; ?>" alt="logo" class="white-logo"></a>
+						<a href="index.html"><img src="<?php echo get_template_directory_uri().'/img/jalegal_img/logo.png'; ?>" alt="logo" class="black-logo active"></a>
+					</div>
+					<div class="searh_menu_icon">
+						<span class="search">
+						<a href="javascript:;" class="white_bg">
+							<img src="<?php echo get_template_directory_uri().'/img/jalegal_img/search.svg' ?>" alt="search">
+						</a>
+						<a href="javascript:;" class="black_bg">
+							<img src="<?php echo get_template_directory_uri().'/img/jalegal_img/search_black.svg' ?>" alt="search">
+						</a>
+						</span>
+						<div class="menu-toggle">
+						<span></span>
+						</div>
+					</div>
+					</div>
+
+					<div class="menu-drop flex-wrp">
+					<ul class="main-menu">
+						<li><a href="https://jalegal.nytrotech.net/">HOME</a></li>
+						<li><a href="https://jalegal.nytrotech.net/about/">ABOUT</a></li>
+						<li><a href="https://jalegal.nytrotech.net/expertise-main/">EXPERTISE</a></li>
+						<li><a href="https://jalegal.nytrotech.net/lawyers/">LAWYERS</a></li>
+						<li><a href="https://jalegal.nytrotech.net/fast-track-legal-services-3/">FAST-TRACK LEGAL SERVICES</a></li>
+						<li><a href="https://jalegal.nytrotech.net/overseas-law/">ARE YOU AN OVERSEAS LAW FIRM</a></li>
+						<li><a href="https://jalegal.nytrotech.net/contact/">OFFICES AND CONTACTS</a></li>
+						<li><a href="https://jalegal.nytrotech.net/get-involved/">GET INVOLVED</a></li>
+					</ul>
+					<div class="footer">
+						<div class="career-wrp">
+						</div>
+						<div class="soc-wrp">
+						<ul class="flex-wrp soc-icons">
+							<li><a href="" target="_blank" rel="noopener"><i class="fab fa-fab fa-linkedin-in"></i></a></li>
+							<li><a href="" target="_blank" rel="noopener"><i class="fab fa-fab fa-twitter"></i></a></li>
+							<li><a href="" target="_blank" rel="noopener"><i class="fab fa-fab fa-youtube"></i></a></li>
+						</ul>
+						<ul class="flex-wrp">
+							<li><a href="">Privacy Policy</a></li>
+							<li><a href="">Terms of Use</a></li>
+							<li><a href="">Disclaimer</a></li>
+						</ul>
+						</div>
+					</div>
+					</div>
+				</div>
+			</nav>
+		</header>
