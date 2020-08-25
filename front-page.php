@@ -53,54 +53,82 @@
 
   <main id="scroll-page">
 
-    <section class="home-banner white-banner"
-      style="background: url(<?php echo get_template_directory_uri().'/img/jalegal_img/main/book-shelves-book-stack-bookcase-books-207662.jpg'; ?>) no-repeat center center;">
-      <div class="container">
-        <div class="wrapper">
-          <div class="banner-overlay flex-wrp top-animate"></div>
-          <div class="banner-desc flex-wrp top-animateLight">
-            <div class="title-def">
-              <h2>Home</h2>
-            </div>
-            <div class="title">
-              <h1><span class="gold_title">Client</span> Focused <span class="gold_title">and Result</span> Oriented
-              </h1>
-            </div>
-            <p class="quote">“I am text block. Click edit button to change.”
-              <span>(Family Law Client)</span>
-            </p>
-
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="home-banner" style="background: url(<?php echo get_template_directory_uri().'/img/jalegal_img/main/book-shelves-.jpg'; ?>) no-repeat center center;">
-      <div class="container">
-        <div class="wrapper">
-          <div class="banner-overlay flex-wrp bottom-animate"></div>
-          <div class="banner-desc flex-wrp top-animateLight">
-            <div class="title-def">
-              <h2>About Us</h2>
-            </div>
-            <div class="title-sub">
-              <h2>Not just any other law firm</h2>
-            </div>
-            <p>JA Legal was founded by Barrister Junaid Ahmed, as a means to provide the most quality legal services at
-              the most cost-competitive and accessible of manners. He believes that recourse to legal remedies is a
-              basic right for all, and so through JA Legal, he aims to spread wide, legal solutions for everyone.
-
-            </p>
-
-            <div class="btn-wrp">
-              <a href="https://jalegal.nytrotech.net/aboutus/" class="btn black-btn">Explore JA Legal
-              </a>
-              <a href="https://jalegal.nytrotech.net/#" class="btn black-btn">Download Profile</a>
+    <!-- Home Section -->
+    <?php 
+    
+      if(get_theme_mod('show_home')) {
+        ?>
+        <section class="home-banner white-banner"
+          style="background: url(<?php echo get_template_directory_uri().'/img/jalegal_img/main/book-shelves-book-stack-bookcase-books-207662.jpg'; ?>) no-repeat center center;">
+          <div class="container">
+            <div class="wrapper">
+              <div class="banner-overlay flex-wrp top-animate"></div>
+              <div class="banner-desc flex-wrp top-animateLight">
+                <div class="title-def">
+                  <h2><?php echo get_theme_mod('title_home'); ?></h2>
+                </div>
+                <?php 
+                  if(get_theme_mod( 'description_home' )) {
+                      ?>
+                      <div class="title">
+                        <h1>
+                          <?php echo get_theme_mod('description_home'); ?>
+                          <!-- <span class="gold_title">Client</span> Focused <span class="gold_title">and Result</span> Oriented -->
+                        </h1>
+                      </div>
+                      <?php
+                  }
+                ?>
+                <?php if(get_theme_mod('quote_home')){ ?>
+                  <p class="quote">“<?php echo get_theme_mod('quote_home'); ?>.”
+                    <?php if(get_theme_mod('quote_author_home')) { ?>
+                    <span>(<?php echo get_theme_mod('quote_author_home'); ?>)</span>
+                    <?php } ?>
+                  </p>
+                <?php } ?>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
+        </section>
+        <?php
+      }
+        
+    ?>
+
+
+    <?php
+      if(get_theme_mod('show_about')) {
+        ?>
+        <section class="home-banner" style="background: url(<?php echo get_template_directory_uri().'/img/jalegal_img/main/book-shelves-.jpg'; ?>) no-repeat center center;">
+          <div class="container">
+            <div class="wrapper">
+              <div class="banner-overlay flex-wrp bottom-animate"></div>
+              <div class="banner-desc flex-wrp top-animateLight">
+                <?php if(get_theme_mod('title_about')){ ?>
+                  <div class="title-def" id="about-title-def">
+                    <h2><?php echo get_theme_mod('title_about'); ?></h2>
+                  </div>
+                <?php } ?>
+                <?php if(get_theme_mod('subtitle_about')){ ?>
+                  <div class="title-sub">
+                    <h2><?php echo get_theme_mod('subtitle_about'); ?></h2>
+                  </div>
+                <?php } ?>
+                <?php if(get_theme_mod('description_about')) { ?>
+                  <p><?php echo get_theme_mod('description_about'); ?></p>
+                <?php } ?>
+                <div class="btn-wrp">
+                  <a href="<?php echo get_page_link(get_page_by_path( '/aboutus', OBJECT, 'page' )->ID); ?>" class="btn black-btn">Explore JA Legal
+                  </a>
+                  <a href="#" class="btn black-btn">Download Profile</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <?php 
+      }
+    ?>
 
     <section class="home-banner white-banner"
       style="background: url(<?php echo get_template_directory_uri().'/img/jalegal_img/main/Group\ 1537.jpg'; ?>) no-repeat center center;">

@@ -7,7 +7,10 @@
  * @since 1.0
  */
 
-	//  custom nav
+	// Customizer
+ 	require_once get_template_directory() . '/includes/customizer.php';
+
+	// Custom Menu
 	function custom_nav_menu() {
 		register_nav_menu( 'custom-nav-menu', __('Main Menu') );
 	}
