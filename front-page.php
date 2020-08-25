@@ -130,61 +130,70 @@
       }
     ?>
 
-    <section class="home-banner white-banner"
-      style="background: url(<?php echo get_template_directory_uri().'/img/jalegal_img/main/Group\ 1537.jpg'; ?>) no-repeat center center;">
-      <div class="container">
-        <div class="wrapper">
-          <div class="banner-overlay flex-wrp top-animate"></div>
-          <div class="banner-desc flex-wrp top-animateLight">
-            <div class="title-def">
-              <h2>Expertise</h2>
+    <!-- Expertise Section -->
+    <?php if(get_theme_mod('show_expertise')) { ?>
+      <section class="home-banner white-banner"
+        style="background: url(<?php echo get_template_directory_uri().'/img/jalegal_img/main/Group\ 1537.jpg'; ?>) no-repeat center center;">
+        <div class="container">
+          <div class="wrapper">
+            <div class="banner-overlay flex-wrp top-animate"></div>
+            <div class="banner-desc flex-wrp top-animateLight">
+              <?php if(get_theme_mod('title_expertise')) { ?>
+                <div class="title-def">
+                  <h2><?php echo get_theme_mod('title_expertise'); ?></h2>
+                </div>
+              <?php } ?>
+              <?php if(get_theme_mod('description_expertise')) { ?>
+                <p>
+                  <?php echo get_theme_mod('description_expertise'); ?>
+                </p>
+              <?php } ?>
+              <div class="btn-wrp">
+
+                <a href="<?php echo get_page_link(get_page_by_path( '/expertise-main', OBJECT, 'page' )->ID); ?>" class="btn white-btn">Legal Services
+                </a>
+                <a href="<?php echo get_page_link(get_page_by_path( '/fast-track-legal-services-3', OBJECT, 'page' )->ID); ?>" class="btn white-btn">Fast-track Services
+                </a>
+              </div>
             </div>
-            <p>We work on both corporate and litigious matters. Specifically, JA Legal is regularly engaged by foreign
-              companies, multinationals and large local companies to advise them and/or to represent them in cases.
-              Along with our portfolio of legal services, we also offer a fast-track procedure for specific legal
-              services.
-
-            </p>
-
-            <div class="btn-wrp">
-
-              <a href="https://jalegal.nytrotech.net/expertise-main/" class="btn white-btn">Legal Services
-              </a>
-              <a href="https://jalegal.nytrotech.net/fast-track-legal-services-3/" class="btn white-btn">Fast-track Services
-              </a>
+            <div class="bg-img">
+              <img src="" alt="">
             </div>
-          </div>
-          <div class="bg-img">
-            <img src="" alt="">
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    <?php } ?>
 
-    <section class="home-banner" style="background: url(<?php echo get_template_directory_uri().'/img/jalegal_img/main/lawyer.jpg'; ?>) no-repeat center center;">
-      <div class="container">
-        <div class="wrapper">
-          <div class="banner-overlay flex-wrp bottom-animate"></div>
-          <div class="banner-desc flex-wrp top-animateLight">
-            <div class="title-def">
-              <h2>Lawyers</h2>
+    <!-- Lawyers Section -->
+    <?php if(get_theme_mod('show_lawyer')) { ?>
+      <section class="home-banner" style="background: url(<?php echo get_template_directory_uri().'/img/jalegal_img/main/lawyer.jpg'; ?>) no-repeat center center;">
+        <div class="container">
+          <div class="wrapper">
+            <div class="banner-overlay flex-wrp bottom-animate"></div>
+            <div class="banner-desc flex-wrp top-animateLight">
+              <?php if(get_theme_mod('title_lawyer')){ ?>
+                <div class="title-def">
+                  <h2><?php echo get_theme_mod('title_lawyer'); ?></h2>
+                </div>
+              <?php } ?>
+              <?php if(get_theme_mod('description_lawyer')) { ?>
+                <p>
+                  <?php echo get_theme_mod('description_lawyer'); ?>
+                </p>
+              <?php } ?>
+
+              <div class="btn-wrp">
+                <a href="<?php echo get_page_link(get_page_by_path( '/lawyers', OBJECT, 'page' )->ID); ?>" class="btn black-btn">Explore Our Team
+                </a>
+              </div>
             </div>
-            <p>I am text block. Click edit button to change this text. Lorem ipsum dolor sit amet, consectetur
-              adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
-
-            </p>
-
-            <div class="btn-wrp">
-              <a href="https://jalegal.nytrotech.net/lawyers/" class="btn black-btn">Explore Our Team
-              </a>
+            <div class="bg-img">
+              <img src="" alt="">
             </div>
-          </div>
-          <div class="bg-img">
-            <img src="" alt="">
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    <?php } ?>
 
 
     <div id="output"></div>

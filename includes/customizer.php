@@ -156,6 +156,46 @@ function expertise_section($wp_customize) {
     $wp_customize->add_section('expertise_section', array(
         'title'    => 'Expertise Section',
         'priority' => 5,
+        'active_callback' => 'is_front_page',
+    ));
+
+    // Enable/Disable Control
+    $wp_customize->add_setting('show_expertise', array(
+        'default'    => false,
+        'capability' => 'edit_theme_options',
+    ));
+
+    $wp_customize->add_control('enable_expertise', array(
+        'label'    => 'Show Expertise Section',
+        'section'  => 'expertise_section',
+        'settings' => 'show_expertise',
+        'type'     => 'checkbox',
+    ));
+
+    // Title
+    $wp_customize->add_setting('title_expertise', array(
+        'default'    => 'Expertise',
+        'capability' => 'edit_theme_options',
+    ));
+
+    $wp_customize->add_control('show_title_expertise', array(
+        'label'    => 'Third Section Title',
+        'section'  => 'expertise_section',
+        'settings' => 'title_expertise',
+        'type'     => 'text',
+    ));
+
+    // Description
+    $wp_customize->add_setting('description_expertise', array(
+        'default'    => 'hello world',
+        'capability' => 'edit_theme_options',
+    ));
+
+    $wp_customize->add_control('show_description_expertise', array(
+        'label'    => 'Third Section Description',
+        'section'  => 'expertise_section',
+        'settings' => 'description_expertise',
+        'type'     => 'textarea',
     ));
 }
 add_action( 'customize_register', 'expertise_section' );
@@ -165,6 +205,46 @@ function lawyers_section($wp_customize) {
     $wp_customize->add_section('lawyers_section', array(
         'title'    => 'Lawyers Section',
         'priority' => 6,
+        'active_callback' => 'is_front_page',
+    ));
+
+    // Enable/Disable Control
+    $wp_customize->add_setting('show_lawyer', array(
+        'default'    => false,
+        'capability' => 'edit_theme_options',
+    ));
+
+    $wp_customize->add_control('enable_lawyer', array(
+        'label'    => 'Show Lawyers Section',
+        'section'  => 'lawyers_section',
+        'settings' => 'show_lawyer',
+        'type'     => 'checkbox',
+    ));
+
+    // Title
+    $wp_customize->add_setting('title_lawyer', array(
+        'default'    => 'Lawyers',
+        'capability' => 'edit_theme_options',
+    ));
+
+    $wp_customize->add_control('show_title_lawyer', array(
+        'label'    => 'Third Section Title',
+        'section'  => 'lawyers_section',
+        'settings' => 'title_lawyer',
+        'type'     => 'text',
+    ));
+
+    // Description
+    $wp_customize->add_setting('description_lawyer', array(
+        'default'    => 'hello world',
+        'capability' => 'edit_theme_options',
+    ));
+
+    $wp_customize->add_control('show_description_lawyer', array(
+        'label'    => 'Third Section Description',
+        'section'  => 'lawyers_section',
+        'settings' => 'description_lawyer',
+        'type'     => 'textarea',
     ));
 }
 add_action( 'customize_register', 'lawyers_section' );
