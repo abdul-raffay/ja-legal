@@ -228,7 +228,7 @@ function lawyers_section($wp_customize) {
     ));
 
     $wp_customize->add_control('show_title_lawyer', array(
-        'label'    => 'Third Section Title',
+        'label'    => 'Fourth Section Title',
         'section'  => 'lawyers_section',
         'settings' => 'title_lawyer',
         'type'     => 'text',
@@ -241,7 +241,7 @@ function lawyers_section($wp_customize) {
     ));
 
     $wp_customize->add_control('show_description_lawyer', array(
-        'label'    => 'Third Section Description',
+        'label'    => 'Fourth Section Description',
         'section'  => 'lawyers_section',
         'settings' => 'description_lawyer',
         'type'     => 'textarea',

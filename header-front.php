@@ -34,8 +34,8 @@
       <div class="container">
         <div class="wrapper flex-wrp">
           <div class="logo">
-            <a href="index.html"><img src="<?php echo get_template_directory_uri().'/img/jalegal_img/logo-b.svg'; ?>" alt="logo" class="white-logo"></a>
-            <a href="index.html"><img src="<?php echo get_template_directory_uri().'/img/jalegal_img/logo.png'; ?>" alt="logo" class="black-logo active"></a>
+            <a href="<?php echo esc_url(site_url()); ?>"><img src="<?php echo get_template_directory_uri().'/img/jalegal_img/logo-b.svg'; ?>" alt="logo" class="white-logo"></a>
+            <a href="<?php echo esc_url(site_url()); ?>"><img src="<?php echo get_template_directory_uri().'/img/jalegal_img/logo.png'; ?>" alt="logo" class="black-logo active"></a>
           </div>
           <div class="searh_menu_icon">
             <span class="search">
@@ -65,16 +65,6 @@
                     'menu_class' => 'main-menu',
                 ));
             ?>
-          <!-- <ul class="main-menu">
-            <li><a href="https://jalegal.nytrotech.net/">HOME</a></li>
-            <li><a href="https://jalegal.nytrotech.net/about/">ABOUT</a></li>
-            <li><a href="https://jalegal.nytrotech.net/expertise-main/">EXPERTISE</a></li>
-            <li><a href="https://jalegal.nytrotech.net/lawyers/">LAWYERS</a></li>
-            <li><a href="https://jalegal.nytrotech.net/fast-track-legal-services-3/">FAST-TRACK LEGAL SERVICES</a></li>
-            <li><a href="https://jalegal.nytrotech.net/overseas-law/">ARE YOU AN OVERSEAS LAW FIRM</a></li>
-            <li><a href="https://jalegal.nytrotech.net/contact/">OFFICES AND CONTACTS</a></li>
-            <li><a href="https://jalegal.nytrotech.net/get-involved/">GET INVOLVED</a></li>
-          </ul> -->
           <div class="footer">
             <div class="career-wrp">
             </div>

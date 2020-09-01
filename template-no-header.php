@@ -38,7 +38,7 @@ $nectar_header_options = nectar_get_header_variables();
 
 ?>
 
-<body <?php body_class(); ?> <?php nectar_body_attributes(); ?>>
+<body <?php // body_class(); ?> <?php nectar_body_attributes(); ?>>
 	
 	<?php 
 	

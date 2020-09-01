@@ -283,7 +283,7 @@ header.active {
 }
 
 header.active .logo img {
-    width: 80%
+    width: 80% 
 }
 
 header.header-blue .logo a:last-child {
@@ -1799,3 +1799,7 @@ label.solid_btn button:hover span img {
     width: 100%
 }
 
+
+.soc-icons {
+    margin: 0 0 30px 30px !important;
+}
