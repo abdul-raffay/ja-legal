@@ -1143,9 +1143,9 @@
     .home-banner .btn span {
         display: none;
     }
-    section.home-banner {
+    /* section.home-banner {
         background: 0 0 !important;
-    }
+    } */
     section.home-banner .title-def {
         margin: 0;
     }

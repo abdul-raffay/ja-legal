@@ -23,6 +23,7 @@
 	wp_head();
 	
 	?>
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri().'/css/headerCustom.css'; ?>">
 	
 </head>
 
@@ -52,7 +53,7 @@ $nectar_header_options = nectar_get_header_variables();
 	<div id="header-outer" <?php nectar_header_nav_attributes(); ?>>
 		<header class="header">
 			<nav class="check">
-				<div class="container">
+				<div class="customContainer">  <!-- container class here -->
 					<div class="wrapper flex-wrp pdCustomMenu" style="">
 						<div class="logo">
 							<a href="<?php echo esc_url(site_url()); ?>"><img src="<?php echo get_template_directory_uri().'/img/jalegal_img/logo-b.svg'; ?>" alt="logo" class="white-logo active"></a>
@@ -213,6 +214,55 @@ $nectar_header_options = nectar_get_header_variables();
 			document.getElementById('overlayCustom').style.display = "none";
 		});
 	</script>
+
+<div id="searchWrap">
+    <div class="team-container">
+      <div class="name-header">
+        <div>
+          <div class="wrapper">
+            <div class="title-def">
+              <h3 style="color: transparent;">Search</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="searchpage">
+        <div>
+          <div class="wrapper">
+            <div class="search_box">
+      		  <a href="javascript:;" class="closeBtn"><img src="<?php echo get_template_directory_uri().'/img/jalegal_img/Close.png'; ?>" alt="Close"></a>
+              <form id="search-box" class="" action="" method="get">
+                <input type="text" name="s" id="text" class="input_search" value=""
+                  placeholder="Search for people, events, expertise etc…" />
+                <button type="submit" class="searchBtn">
+                  <img src="<?php echo get_template_directory_uri().'/img/jalegal_img/search_icon.png'; ?>" alt="search" />
+                </button>
+              </form>
+            </div>
+            <div class="search_suggestion">
+              <div class="searchAll">See all results for <a href="#" id="result-text">""</a></div>
+            </div>
+            <div class="search_result">
+              <div class="result_lenght"></div>
+              <ul class="filter_nav_bar">
+                <li><b>Filters:</b></li>
+                <li><a href="javascript:void(0)" class="active" data-str="all">All</a></li>
+                <li><a href="javascript:void(0)" class="" data-str="people">People</a></li>
+                <li><a href="javascript:void(0)" class="" data-str="expertise_area">Expertise</a></li>
+                <li><a href="javascript:void(0)" class="" data-str="publication">Insights</a></li>
+                <li><a href="javascript:void(0)" class="" data-str="news">News</a></li>
+              </ul>
+              <div class="results">
+                <ul class="results-ul">
+
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 	<div id="ajax-content-wrap">
 		<?php
 		

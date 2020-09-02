@@ -788,3 +788,79 @@ if ($('.wrapper.flex-wrp').length) {
             $('.tab-wrp .download').removeAttr('style');
         }
     }
+
+    $("#searchpage .search_result").hide()
+    $(".search_suggestion").hide()
+    $(".filter_nav_bar a").on("click",function(){
+      $(".filter_nav_bar a").removeClass("active");
+      $(this).addClass("active");
+      $("#search-box").submit();
+    
+    })
+    var searchText = document.getElementById("text");
+    if(searchText){
+      searchText.addEventListener("keyup", function(event) {
+      // Number 13 is the "Enter" key on the keyboard
+      if (event.keyCode === 13) {
+        // Cancel the default action, if needed
+        event.preventDefault();
+        // Trigger the button element with a click
+        $("#search-box").submit();
+      }
+    });
+    }
+    $("#search-page #search-box").on("submit",function(){
+      var data,result,text;
+      text=$("#search-page-text").val()
+      data={}
+      if(text!=''){
+        data["keyword"]=text.toLowerCase()
+        data["type"]=$(".filter_nav_bar .active").attr("data-str").toLowerCase()
+        result = $.param(data);
+        $.get('/search-content' + "?" +result, function (data) {
+          var newHtml=''
+          if(Array.isArray(data) && data.length!=0){
+    
+          }
+          else if(typeof(data)=='string'){
+              data=JSON.parse(data)
+          }
+          else{
+            data=[]
+          }
+          $("#search-page #result-text").html(text)
+          $("#search-page .result_lenght").html("("+data.length+" results found)")
+          data.forEach(function(item){
+            var articleDate = typeof(item.date) !== "undefined" ? item.date : "";
+            newHtml+='<li>'
+            newHtml+='<div class="result_type">'
+            newHtml+='<span class="type type_people">'+item.type+'</span> '
+            newHtml+='<span class="searchdate">'+ articleDate +'</span>'
+            newHtml+='</div>'
+            newHtml+='<div class="result_content">'
+            // newHtml+='<div class="pic"><img src="images/search/result_img1.jpg" alt="" /></div>'
+            newHtml+='<div class="descript">'
+            newHtml+='<h4><a href="'+item.url+'">'+item.title+'</a></h4>'
+            if(item.field_designation){
+              newHtml+='<div class="subtitle">'+item.field_designation+'</div>'
+            }
+            newHtml+=item.body || ""
+            newHtml+='</div>'
+            newHtml+='</div>'
+            newHtml+='</li>'
+          })
+          $('#search-page #searchpage .results-ul').html(newHtml)
+          $("#search-page #searchpage .search_result").show()
+          $("#search-page .search_suggestion").show()
+    
+        })
+      }
+      else{
+        $("#search-page #searchpage .search_result").hide()
+        $("#search-page .search_suggestion").hide()
+    
+      }
+    
+      return false;
+    })
+    $("#search-page #search-box").submit()

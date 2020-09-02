@@ -40,6 +40,8 @@ get_template_part( 'includes/partials/footer/off-canvas-navigation' );
 
 </div> <!--/ajax-content-wrap-->
 
+<script src="<?php echo get_template_directory_uri().'/js/custom-main.js'; ?>"></script>
+
 <?php
 	
 	// Boxed theme option closing div.

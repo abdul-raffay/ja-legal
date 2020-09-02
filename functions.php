@@ -22,7 +22,7 @@
 	// wp_enqueue_style('main_style_jalegal', get_theme_file_uri('css/jalegal_style/style.css'));
 	// wp_enqueue_style('media_style_jalegal', get_theme_file_uri('css/jalegal_style/media.css'));
 	// wp_enqueue_style('one_page_style_jalegal', get_theme_file_uri('css/jalegal_style/onepage-scroll.css'));
-	wp_enqueue_style('custom_header_style_jalegal', get_theme_file_uri('css/headerCustom.css'));
+	// wp_enqueue_style('custom_header_style_jalegal', get_theme_file_uri('css/headerCustom.css'));
 
 	// Google Fonts
 	// wp_enqueue_style('googleFontsAPI', 'https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700');
@@ -33,7 +33,7 @@
 	// JS
 	// wp_enqueue_script('common_script_jalegal', get_theme_file_uri('js/jalegal_js/jquery.min.js'), '', '1.0', true);
 	wp_enqueue_script('common_script_jalegal', get_theme_file_uri('js/jalegal_js/common-es.js'), '', '1.0', true);
-	wp_enqueue_script('custom_main_jquery_script_jalegal', get_theme_file_uri('js/custom-main.js'), '', '1.0', true);
+	// wp_enqueue_script('custom_main_jquery_script_jalegal', get_theme_file_uri('js/custom-main.js'), '', '1.0', true);
 	wp_enqueue_script('main_script_jalegal', get_theme_file_uri('js/jalegal_js/custom.js'), '', '1.0', true);
 	// wp_enqueue_script('jquery_one_page_script_jalegal', get_theme_file_uri('js/jalegal_js/jquery.onepage-scroll.min.js'), '', '1.0', true);
 	// wp_enqueue_script('complete_script_jalegal', get_theme_file_uri('js/jalegal_js/autocomplete.js'), '', '1.0', true);

@@ -34,8 +34,8 @@
       <div class="container">
         <div class="wrapper flex-wrp">
           <div class="logo">
-            <a href="<?php echo esc_url(site_url()); ?>"><img src="<?php echo get_template_directory_uri().'/img/jalegal_img/logo-b.svg'; ?>" alt="logo" class="white-logo"></a>
-            <a href="<?php echo esc_url(site_url()); ?>"><img src="<?php echo get_template_directory_uri().'/img/jalegal_img/logo.png'; ?>" alt="logo" class="black-logo active"></a>
+            <a href="<?php echo esc_url(site_url()); ?>"><img src="<?php echo get_template_directory_uri().'/img/jalegal_img/logo.png'; ?>" alt="logo" class="white-logo active"></a>
+            <a href="<?php echo esc_url(site_url()); ?>"><img src="<?php echo get_template_directory_uri().'/img/jalegal_img/logo-b.svg'; ?>" alt="logo" class="black-logo"></a>
           </div>
           <div class="searh_menu_icon">
             <span class="search">
@@ -85,3 +85,52 @@
       </div>
     </nav>
   </header>
+
+  <div id="searchWrap">
+    <div class="team-container">
+      <a href="javascript:;" class="closeBtn"><img src="<?php echo get_template_directory_uri().'/img/jalegal_img/Close.png'; ?>" alt="Close"></a>
+      <div class="name-header">
+        <div>
+          <div class="wrapper">
+            <div class="title-def">
+              <h3>Search</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="searchpage">
+        <div>
+          <div class="wrapper">
+            <div class="search_box">
+              <form id="search-box" class="" action="" method="get">
+                <input type="text" name="s" id="text" class="input_search" value=""
+                  placeholder="Search for people, events, expertise etc…" />
+                <button type="submit" class="searchBtn">
+                  <img src="<?php echo get_template_directory_uri().'/img/jalegal_img/search_icon.png'; ?>" alt="search" />
+                </button>
+              </form>
+            </div>
+            <div class="search_suggestion">
+              <div class="searchAll">See all results for <a href="#" id="result-text">""</a></div>
+            </div>
+            <div class="search_result">
+              <div class="result_lenght"></div>
+              <ul class="filter_nav_bar">
+                <li><b>Filters:</b></li>
+                <li><a href="javascript:void(0)" class="active" data-str="all">All</a></li>
+                <li><a href="javascript:void(0)" class="" data-str="people">People</a></li>
+                <li><a href="javascript:void(0)" class="" data-str="expertise_area">Expertise</a></li>
+                <li><a href="javascript:void(0)" class="" data-str="publication">Insights</a></li>
+                <li><a href="javascript:void(0)" class="" data-str="news">News</a></li>
+              </ul>
+              <div class="results">
+                <ul class="results-ul">
+
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
